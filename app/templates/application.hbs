@@ -1,3 +1,31 @@
-<h2 id="title">Welcome to Ember</h2>
+<body>
+<header>
+    <img id="left-header-image" src="assets/img/left-header-flower.png" />
+    <div id="header-title">
+        <h1>Lavender + Bell</h1>
+        <h2>photography & videography</h2>
+    </div>
+    <img id="right-header-image" src="assets/img/right-header-flower.png" />
+
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <ul class="nav navbar-nav">
+                <li>{{#link-to 'index'}}home{{/link-to}}</li>
+                <li>{{#link-to 'about'}}about{{/link-to}}</li>
+                <li>{{#link-to 'portfolio'}}portfolio{{/link-to}}</li>
+                <li>{{#link-to 'video'}}video{{/link-to}}</li>
+                <li>{{#link-to 'info-pricing'}}info & pricing{{/link-to}}</li>
+                <li>{{#link-to 'contact'}}contact{{/link-to}}</li>
+                <li>{{#link-to 'blog'}}blog{{/link-to}}</li>
+            </ul>
+        </div>
+    </nav>
+</header>
 
 {{outlet}}
+
+<footer>
+    <span>© 2016 by Nathaniel Scott Stevens</span>
+</footer>
+</body>
+
