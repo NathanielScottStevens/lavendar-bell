@@ -1,31 +1,37 @@
 <body>
 <header>
-    <img id="left-header-image" src="assets/img/left-header-flower.png" />
-    <div id="header-title">
-        <h1>Lavender + Bell</h1>
-        <h2>photography & videography</h2>
+    <div class="row">
+      <img id="left-header-image" class="col-2" src="assets/img/left-header-flower.png" />
+      <div class="col-8">
+          <h1>Lavender + Bell</h1>
+          <h2>photography & videography</h2>
+      </div>
+      <img id="right-header-image" class="col-2" src="assets/img/right-header-flower.png" />
     </div>
-    <img id="right-header-image" src="assets/img/right-header-flower.png" />
 
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
-            <ul class="nav navbar-nav">
-                <li>{{#link-to 'index'}}home{{/link-to}}</li>
-                <li>{{#link-to 'about'}}about{{/link-to}}</li>
-                <li>{{#link-to 'portfolio'}}portfolio{{/link-to}}</li>
-                <li>{{#link-to 'video'}}video{{/link-to}}</li>
-                <li>{{#link-to 'info-pricing'}}info & pricing{{/link-to}}</li>
-                <li>{{#link-to 'contact'}}contact{{/link-to}}</li>
-                <li>{{#link-to 'blog'}}blog{{/link-to}}</li>
-            </ul>
-        </div>
-    </nav>
+    <div class="row">
+        <div class="col-2"></div>
+        <nav class="col-8">
+            <div>
+                <ul>
+                    <li>{{#link-to 'index'}}home{{/link-to}}</li>
+                    <li>{{#link-to 'about'}}about{{/link-to}}</li>
+                    <li>{{#link-to 'portfolio'}}portfolio{{/link-to}}</li>
+                    <li>{{#link-to 'video'}}video{{/link-to}}</li>
+                    <li>{{#link-to 'info-pricing'}}info & pricing{{/link-to}}</li>
+                    <li>{{#link-to 'contact'}}contact{{/link-to}}</li>
+                    <li>{{#link-to 'blog'}}blog{{/link-to}}</li>
+                </ul>
+            </div>
+        </nav>
+        <div class="col-2"></div>
+    </div>
 </header>
 
 {{outlet}}
 
-<footer>
-    <span>© 2016 by Nathaniel Scott Stevens</span>
+<footer class="row">
+    <span class="col-12">© 2016 by Nathaniel Scott Stevens</span>
 </footer>
 </body>
 
