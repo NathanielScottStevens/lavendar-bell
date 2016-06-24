@@ -1,3 +1,5 @@
+@import "grid.scss";
+
 $primaryFont: sans-serif;
 
 header {
@@ -35,7 +37,6 @@ nav {
       a {
         text-decoration: none;
         display: block;
-        width: 100px;
         text-align: center;
         color: $baseColor;
         @include fade-text(0.3s, ease);
@@ -57,29 +58,10 @@ nav {
   }
 }
 
-* {
-  box-sizing: border-box;
-}
-
-%col {
-  float: left;
-  padding: 15px;
-  border: 1px solid red;
-}
-
-.col-1 {@extend %col; width: 1/12 * 100%}
-.col-2 {@extend %col; width: 2/12 * 100%}
-.col-3 {@extend %col; width: 3/12 * 100%}
-.col-4 {@extend %col; width: 4/12 * 100%}
-.col-5 {@extend %col; width: 5/12 * 100%}
-.col-6 {@extend %col; width: 6/12 * 100%}
-.col-7 {@extend %col; width: 7/12 * 100%}
-.col-8 {@extend %col; width: 8/12 * 100%}
-.col-9 {@extend %col; width: 9/12 * 100%}
-.col-10 {@extend %col; width: 10/12 * 100%}
-.col-11 {@extend %col; width: 11/12 * 100%}
-.col-12 {@extend %col; width: 100%}
-
 footer {
   text-align: center;
+}
+
+.photo {
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
 }

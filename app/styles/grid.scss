@@ -1,0 +1,51 @@
+$desktopBreakPoint: 768px;
+$tabletBreakPoint: 600px;
+
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  clear: left;
+}
+
+@mixin column($width){
+  float: left;
+  width: $width * 100%;
+  padding: 15px;
+  border: 1px solid red;
+}
+
+//Mobile first
+[class*='col-']
+{@include column(12/12)}
+
+@media only screen and (min-width: $tabletBreakPoint) {
+  .col-m-1 {@include column(1/12)}
+  .col-m-2 {@include column(2/12)}
+  .col-m-3 {@include column(3/12)}
+  .col-m-4 {@include column(4/12)}
+  .col-m-5 {@include column(5/12)}
+  .col-m-6 {@include column(6/12)}
+  .col-m-7 {@include column(7/12)}
+  .col-m-8 {@include column(8/12)}
+  .col-m-9 {@include column(9/12)}
+  .col-m-10 {@include column(10/12)}
+  .col-m-11 {@include column(11/12)}
+  .col-m-12 {@include column(12/12)}
+}
+
+@media only screen and (min-width: $desktopBreakPoint) {
+  .col-lg-1 {@include column(1/12)}
+  .col-lg-2 {@include column(2/12)}
+  .col-lg-3 {@include column(3/12)}
+  .col-lg-4 {@include column(4/12)}
+  .col-lg-5 {@include column(5/12)}
+  .col-lg-6 {@include column(6/12)}
+  .col-lg-7 {@include column(7/12)}
+  .col-lg-8 {@include column(8/12)}
+  .col-lg-9 {@include column(9/12)}
+  .col-lg-10 {@include column(10/12)}
+  .col-lg-11 {@include column(11/12)}
+  .col-lg-12 {@include column(12/12)}
+}

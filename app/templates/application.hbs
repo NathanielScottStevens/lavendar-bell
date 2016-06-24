@@ -1,37 +1,39 @@
 <body>
 <header>
     <div class="row">
-      <img id="left-header-image" class="col-2" src="assets/img/left-header-flower.png" />
-      <div class="col-8">
-          <h1>Lavender + Bell</h1>
-          <h2>photography & videography</h2>
-      </div>
-      <img id="right-header-image" class="col-2" src="assets/img/right-header-flower.png" />
+        <div class="col-lg-2"></div>
+        <img id="left-header-image" class="col-lg-2" src="assets/img/left-header-flower.png" />
+        <div class="col-lg-4">
+            <h1>Lavender + Bell</h1>
+            <h2>photography & videography</h2>
+        </div>
+        <img id="right-header-image" class="col-lg-2" src="assets/img/right-header-flower.png" />
+        <div class="col-lg-2"></div>
     </div>
 
     <div class="row">
-        <div class="col-2"></div>
-        <nav class="col-8">
+        <div class="col-lg-2"></div>
+        <nav>
             <div>
                 <ul>
-                    <li>{{#link-to 'index'}}home{{/link-to}}</li>
-                    <li>{{#link-to 'about'}}about{{/link-to}}</li>
-                    <li>{{#link-to 'portfolio'}}portfolio{{/link-to}}</li>
-                    <li>{{#link-to 'video'}}video{{/link-to}}</li>
-                    <li>{{#link-to 'info-pricing'}}info & pricing{{/link-to}}</li>
-                    <li>{{#link-to 'contact'}}contact{{/link-to}}</li>
-                    <li>{{#link-to 'blog'}}blog{{/link-to}}</li>
+                    <li class="col-lg-1">{{#link-to 'index'}}home{{/link-to}}</li>
+                    <li class="col-lg-1">{{#link-to 'about'}}about{{/link-to}}</li>
+                    <li class="col-lg-1">{{#link-to 'portfolio'}}portfolio{{/link-to}}</li>
+                    <li class="col-lg-1">{{#link-to 'video'}}video{{/link-to}}</li>
+                    <li class="col-lg-2">{{#link-to 'info-pricing'}}info & pricing{{/link-to}}</li>
+                    <li class="col-lg-1">{{#link-to 'contact'}}contact{{/link-to}}</li>
+                    <li class="col-lg-1">{{#link-to 'blog'}}blog{{/link-to}}</li>
                 </ul>
             </div>
         </nav>
-        <div class="col-2"></div>
+        <div class="col-lg-2"></div>
     </div>
 </header>
 
 {{outlet}}
 
 <footer class="row">
-    <span class="col-12">© 2016 by Nathaniel Scott Stevens</span>
+    <span class="col-lg-12">© 2016 by Nathaniel Scott Stevens</span>
 </footer>
 </body>
 
