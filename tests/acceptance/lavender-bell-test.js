@@ -28,17 +28,9 @@ test('should visit portfolio when clicked', function(assert) {
   });
 });
 
-test('should visit video when clicked', function(assert) {
-  visit('/');
-  click('a:contains("video")');
-  andThen(function() {
-    assert.equal(currentURL(), '/video');
-  });
-});
-
 test('should visit info-pricing when clicked', function(assert) {
   visit('/');
-  click('a:contains("info & pricing")');
+  click('a:contains("pricing")');
   andThen(function() {
     assert.equal(currentURL(), '/info-pricing');
   });
