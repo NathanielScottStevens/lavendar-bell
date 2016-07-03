@@ -1,5 +1,18 @@
+<style>
+    .slideshow {
+        position: relative;
+        overflow: hidden;
+        width: 980px;
+        height: 800px; //not right
+    }
+    .slide {
+        position: absolute;
+        left: 0;
+    }
+</style>
+
 <div class="slideshow">
     {{#each photos as |photo|}}
-      <img src="{{photo.src}}">
+      <img src="{{photo.src}}" class="slide">
     {{/each}}
 </div>
