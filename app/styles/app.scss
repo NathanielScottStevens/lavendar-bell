@@ -149,3 +149,66 @@ p {
 .spacer-5 {
   height: 5%;
 }
+
+/* Slide Show */
+
+@mixin animation($name, $duration, $function, $fill) {
+  animation-name: $name;
+  animation-duration: $duration;
+  animation-timing-function: $function;
+  animation-fill-mode: $fill;
+
+  webkit-animation-name: $name;
+  webkit-animation-duration: $duration;
+  webkit-animation-timing-function: $function;
+  webkit-animation-fill-mode: $fill;
+
+  moz-animation-name: $name;
+  moz-animation-duration: $duration;
+  moz-animation-timing-function: $function;
+  moz-animation-fill-mode: $fill;
+}
+
+.slideshow {
+  position: relative;
+  overflow: hidden;
+  width: 980px;
+  height: 600px;
+  box-shadow: 1px 1px 5px #808080;
+}
+
+.slide {
+  position: absolute;
+}
+
+@keyframes slide-on {
+  from {
+    transform: translate3d(100%, 0, 0);
+  }
+  to{
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slide-off {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to{
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+$timingFunction: cubic-bezier(0.61, 0.04, 0.68, 0.92);
+
+.slide-on {
+  @include animation(slide-on, 0.5s, $timingFunction, forwards);
+}
+
+.slide-off {
+  @include  animation(slide-off, 0.5s, $timingFunction, forwards);
+}
+
+.slide-waiting {
+  left: 100%;
+}

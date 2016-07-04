@@ -1,51 +1,5 @@
 <style>
-    .slideshow {
-        position: relative;
-        overflow: hidden;
-        width: 980px;
-        height: 800px; //not right
-    }
 
-    .slide {
-        position: absolute;
-    }
-
-
-    @keyframes slide-on {
-        from {
-            left: 100%;
-        }
-        to{
-            left: 0px;
-        }
-    }
-
-    @keyframes slide-off {
-        from {
-            left: 0px;
-        }
-        to{
-            left: -100%;
-        }
-    }
-
-    .slide-on {
-        animation-name: slide-on;
-        animation-duration: 0.25s;
-        animation-timing-function: ease-in-out;
-        animation-fill-mode: forwards;
-    }
-
-    .slide-off {
-        animation-name: slide-off;
-        animation-duration: 0.25s;
-        animation-timing-function: ease-in-out;
-        animation-fill-mode: forwards;
-    }
-
-    .slide-waiting {
-        left: 100%;
-    }
 </style>
 
 <div class="slideshow">

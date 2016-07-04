@@ -14,14 +14,10 @@ export default Ember.Component.extend({
 
 
     $.each(this.images, function(index, element) {
-        if (index === 0) {
-          $(element).addClass('slide-on');
-        }
-        else {
-          $(element).addClass('slide-waiting');
-        }
+      if (index !== 0) {
+        $(element).addClass('slide-waiting');
       }
-    );
+    });
 
     let that = this;
 
@@ -39,8 +35,7 @@ export default Ember.Component.extend({
     $(left).attr('class', 'slide slide-off');
     $(right).attr('class', 'slide slide-on');
     $(wait).attr('class', 'slide slide-waiting');
-
-
+    
     this.index = (this.index + 1) % this.images.length;
   },
 
