@@ -35,7 +35,7 @@ export default Ember.Component.extend({
     $(left).attr('class', 'slide slide-off');
     $(right).attr('class', 'slide slide-on');
     $(wait).attr('class', 'slide slide-waiting');
-    
+
     this.index = (this.index + 1) % this.images.length;
   },
 

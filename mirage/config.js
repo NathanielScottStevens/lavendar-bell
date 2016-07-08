@@ -24,18 +24,5 @@ export default function() {
     http://www.ember-cli-mirage.com/docs/v0.2.x/shorthands/
   */
 
-  // '/images' must be plural!
-  // type can be either 'image' or 'images'
-  // ids must be unique...this is less of a surprise
-  // 'data' container and 'attributes' are necessary
-  this.get('/images', () => {
-    return {
-      data : [
-        {"id": "1", "type": "image", "attributes": {"src": "assets/img/home-1.jpg"}},
-        {"id": "2", "type": "image", "attributes": {src: "assets/img/home-2.jpg"}},
-        {"id": "3", "type": "image", "attributes": {src: "assets/img/home-3.jpg"}},
-      ]
-    };
-  });
-
+  this.get('/images');
 }
