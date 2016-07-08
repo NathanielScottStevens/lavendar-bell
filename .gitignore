@@ -27,6 +27,7 @@ testem.log
 .idea/vcs.xml
 .idea/jsLibraryMappings.xml
 .idea/encodings.xml
+.idea/compiler.xml
 
 # Sensitive or high-churn files:
 .idea/dataSources.ids
