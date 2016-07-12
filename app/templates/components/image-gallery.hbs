@@ -1,0 +1,7 @@
+{{#each groupedImages as |group|}}
+  <div class="row">
+  {{#each group as |image|}}
+      <img src="{{image.src}}" class="col-m-3" />
+  {{/each}}
+  </div>
+{{/each}}
