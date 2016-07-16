@@ -39,7 +39,7 @@
     "ember-export-application-global": "^1.0.5",
     "ember-inflector": "1.9.4",
     "ember-load-initializers": "^0.5.1",
-    "ember-masonry-grid": "1.1.0",
+    "ember-masonry-grid": "https://github.com/NathanielScottStevens/ember-masonry-grid.git",
     "ember-resolver": "^2.0.3",
     "loader.js": "^4.0.1"
   }
