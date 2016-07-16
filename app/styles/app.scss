@@ -212,3 +212,16 @@ $timingFunction: cubic-bezier(0.61, 0.04, 0.68, 0.92);
 .slide-waiting {
   left: 100%;
 }
+
+
+/*--- Masonry ---*/
+
+.grid-item {
+  float: left;
+  width: 80px;
+  height: 60px;
+  border: 2px solid hsla(0, 0%, 0%, 0.5);
+}
+
+.grid-item--width2 { width: 160px; }
+.grid-item--height2 { height: 140px; }

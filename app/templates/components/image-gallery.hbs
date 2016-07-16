@@ -1,7 +1,7 @@
-{{#each groupedImages as |group|}}
-  <div class="row">
-  {{#each group as |image|}}
-      <img src="{{image.src}}" class="col-m-3" />
-  {{/each}}
-  </div>
-{{/each}}
+<div>
+  {{#masonry-grid items=images customLayout=true initLayout=false as |item index grid|}}
+    {{#masonry-item item=item grid=grid }}
+    <img src="{{item.src}}" class="grid-item" />
+    {{/masonry-item}}
+  {{/masonry-grid}}
+</div>
