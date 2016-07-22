@@ -1,15 +1,17 @@
 <div class="image-gallery">
-  {{#masonry-grid items=images customLayout=true initLayout=false as |item index grid|}}
-    {{#masonry-item item=item grid=grid }}
-    <img src="{{item.src}}" class="grid-item" />
-    {{/masonry-item}}
-  {{/masonry-grid}}
-</div>
-<div class="cover-screen">
-    <div id="camera-loader">
-        <div id="camera-lens-border">
-            <div id="camera-lens"></div>
-        </div>
-        <div id="camera-button"></div>
-    </div>
+  <div class="grid">
+      <div class="grid-sizer"></div>
+      {{#each images as |image| }}
+        <img src="{{image.src}}" class="{{grid-classes image.gridWidth image.gridHeight}}"/>
+      {{/each}}
+  </div>
+
+  <div class="cover-screen">
+      <div id="camera-loader">
+          <div id="camera-lens-border">
+              <div id="camera-lens"></div>
+          </div>
+          <div id="camera-button"></div>
+      </div>
+  </div>
 </div>

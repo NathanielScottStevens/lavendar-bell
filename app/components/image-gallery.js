@@ -1,25 +1,28 @@
+/* global masonry, imagesLoaded */
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  // TODO: Evaluate if this appoach is better:
-  // http://www.thesoftwaresimpleton.com/blog/2015/06/10/cps-promise/
-  groupSize: 4,
-  groupedImages: Ember.computed('images.[]', function() {
 
-    var items = this.get('images.[]');
-    var grouped = Ember.A();
-    var groupSize = this.get('groupSize');
-    var self = this;
+  didInsertElement() {
+    this._super(...arguments);
 
-    return items.then(function(){
-      items.forEach(function(item, index) {
-        if (index % groupSize === 0) grouped.pushObject([]);
-          grouped.get('lastObject').pushObject(item);
-        })
-        self.set('groupedImages', grouped);
-      },
-      function() {
-        console.log("Failed!!");
-    });
-  })
+    Ember.run.later(() => {
+      var grid = $('.grid').imagesLoaded(function() {
+        grid.masonry({
+          columnWidth: 128,
+          itemSelector: '.grid-item',
+          percentPosition: false,
+          //fitWidth: true,
+          gutter: 10,
+        });
+      });
+
+      grid.on('layoutComplete', this.fadeOutCover);
+    }, 1000);
+
+  },
+
+  fadeOutCover(){
+    $('.cover-screen').addClass('fade-out');
+  }
 });

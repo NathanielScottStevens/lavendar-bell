@@ -4,4 +4,6 @@ import attr from 'ember-data/attr';
 
 export default Model.extend({
   src: attr('string'),
+  gridWidth: attr('number'),
+  gridHeight: attr('number')
 });
