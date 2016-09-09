@@ -13,7 +13,7 @@ export default Ember.Component.extend({
           itemSelector: '.grid-item',
           percentPosition: false,
           //fitWidth: true,
-          gutter: 10,
+          //gutter: 10,
         });
       });
 

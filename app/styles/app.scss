@@ -216,21 +216,25 @@ $timingFunction: cubic-bezier(0.61, 0.04, 0.68, 0.92);
 
 /*--- Masonry ---*/
 
+.grid {
+  width: 50%;
+}
+
 .grid-item {
   float: left;
   width: 128px;
-  height: 128px;
+  height: auto; //128px;
   border: 2px solid hsla(0, 0%, 0%, 0.5);
   //margin: 0 auto; for fitWidth
-  margin-bottom: 10px; //for gutter
+ // margin-bottom: 10px; //for gutter
 }
 
 .grid-item--width2 { width: 256px; }
 .grid-item--width3 { width: 512px; }
 //.grid-item--width4 { width: 60%; }
 
-.grid-item--height2 { height: 256px; }
-.grid-item--height3 { height: 512px; }
+//.grid-item--height2 { height: 256px; }
+//.grid-item--height3 { height: 512px; }
 //.grid-item--height4 { height: 60%; }
 
 
